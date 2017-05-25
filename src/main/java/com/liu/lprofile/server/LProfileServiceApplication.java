@@ -11,11 +11,11 @@ import com.liu.lprofile.server.communication.CenterServer;
 public class LProfileServiceApplication {
 
 	public static void main(String[] args) {
+		SpringApplication.run(LProfileServiceApplication.class, args);
 		try {
 			new CenterServer().listener();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		SpringApplication.run(LProfileServiceApplication.class, args);
 	}
 }

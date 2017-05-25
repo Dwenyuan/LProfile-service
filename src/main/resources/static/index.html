@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+	<h1>hello world</h1>
+	<table id="main">
+
+	</table>
+</body>
+<script>
+function getMessage(){
+	$.get('getMessage',data=>{
+		var row = `<tr>
+		<td>${data}</td>
+				 </tr>`;
+		$('#main').append(row);
+		getMessage()
+	})
+}
+getMessage()
+</script>
+</html>
